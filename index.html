@@ -1,12 +1,289 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=h1, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CV TIARA</title>
+    <style>
+        body {
+            font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .navbar {
+            background-color: #333;
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .navbar a {
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 20px auto;
+            overflow: hidden;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .intro {
+            margin-top: 130px;
+            margin-bottom: 130px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .intro .intro-text {
+            flex: 1;
+            text-align: left;
+        }
+
+        .intro .intro-text h1 {
+            margin-top: 0;
+            font-size: 2.5em;
+        }
+
+        .intro .intro-text button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        .intro .intro-text button:hover {
+            background-color: #555;
+        }
+
+        .intro .profile-pic {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            flex: 0 0 auto;
+            margin-left: 20px;
+        }
+
+        section {
+            margin-bottom: 20px;
+        }
+
+        section h2 {
+            background: #333;
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .entry {
+            display: flex;
+            flex-direction: column;
+            background: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .entry h3 {
+            margin-top: 0;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .entry p {
+            margin: 0;
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+
+        .entry img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            margin-right: 20px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            background: #e2e2e2;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #333;
+            color: #fff;
+            border-radius: 0 0 10px 10px;
+            width: 100%;
+            box-sizing: border-box;
+            margin-top: auto;
+        }
+
+        .about-section {
+            display: none;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .about-section .about-text {
+            flex: 2;
+        }
+
+        .about-section .profile-pic {
+            flex: 1;
+            margin: 0;
+        }
+
+        .organizations {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+        }
+
+        .organizations .entry {
+            background: #fff;
+            border: 1px solid #ddd;
+        }
+
+        .organization-role {
+            margin-top: 5px;
+        }
+    </style>
 </head>
+
 <body>
-    <h1>Hello Raeyya!
-    </h1>
+    <div class="navbar">
+        <a href="#education">Education</a>
+        <a href="#organizations">Organizations</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+    </div>
+    <div class="container">
+        <div class="intro">
+            <div class="intro-text">
+                <h1>Hello, My Name is <br />Tiara Dhiya</h1>
+                <button id="aboutToggle">About Me</button>
+            </div>
+            <img style="width: 300px; height: auto" src="img/IMG_2567.JPG" alt="Profile Picture" class="profile-pic" />
+        </div>
+        <section id="about" class="about-section">
+            <div class="about-text">
+                <h2>About Me</h2>
+                <p>
+                    Saya adalah mahasiswa informatika di Politeknik Kampus LP3I
+                    Tasikmalaya yang memiliki dedikasi dalam bidang teknologi informasi.
+                    Memiliki minat dalam UI/UX Design, IT Support, dan Front-End
+                    Development. Saya telah mengembangkan berbagai keterampilan teknis
+                    dan kreatif yang mendalam. Pengalaman saya mencakup proyek desain
+                    antarmuka, serta pengembangan situs web responsif. Saya juga
+                    memiliki pengalaman dalam berbagai organisasi internal kampus, di
+                    mana saya telah mengasah komunikasi dan kerjasama dalam tim. Dengan
+                    keterampilan komunikasi yang baik.
+                </p>
+            </div>
+        </section>
+        <section id="education">
+            <h2>Education</h2>
+            <div class="entry">
+                <img src="img/logo-lp3i.png" alt="LP3I Logo" style="width: 200px; height: auto" />
+                <div>
+                    <h3>Politeknik Kampus LP3I Tasikmalaya (2022 - Sekarang)</h3>
+                    <p>Program Studi: Manajemen Informatika</p>
+                </div>
+            </div>
+            <div class="entry">
+                <img src="img/images__1_-removebg-preview.png" alt="SMA Negeri 9 Tasikmalaya Logo"
+                    style="width: 65px; height: auto" />
+                <div>
+                    <h3>SMA Negeri 9 Tasikmalaya (2019 - 2022)</h3>
+                    <p>Jurusan: IPA</p>
+                </div>
+            </div>
+        </section>
+        <section id="organizations">
+            <h2>Organizations</h2>
+            <div class="entry">
+                <h3>LP3I Computer Club (Agustus 2023 - Sekarang)</h3>
+                <p class="organization-role">Biro Pendidikan</p>
+            </div>
+        </section>
+        <section id="skills">
+            <h2>Skills</h2>
+            <ul id="skills-list">
+                <li>UI/UX Designer</li>
+                <li>Editor</li>
+                <li>Creative Design</li>
+                <li>Front-End Development</li>
+            </ul>
+        </section>
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Email: <span id="email">tiaradhiyaa03@gmail.com</span></p>
+            <p>Telepon: <span id="phone">+62 821 1672 3685</span></p>
+            <p>
+                Alamat:
+                <span id="address">Jl. Mitra Batik No. 15, Kota Tasikmalaya</span>
+            </p>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2024 Tiara Dhiya. All Rights Reserved.</p>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const aboutToggle = document.getElementById("aboutToggle");
+            const aboutSection = document.getElementById("about");
+            aboutToggle.addEventListener("click", function () {
+                if (
+                    aboutSection.style.display === "none" ||
+                    aboutSection.style.display === ""
+                ) {
+                    aboutSection.style.display = "flex";
+                    aboutToggle.textContent = "Hide About Me";
+                } else {
+                    aboutSection.style.display = "none";
+                    aboutToggle.textContent = "About Me";
+                }
+            });
+        });
+    </script>
 </body>
+
 </html>
